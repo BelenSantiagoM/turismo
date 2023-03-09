@@ -1,0 +1,8 @@
+{
+  "name": "Turismo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "bd35bad4"
+}
