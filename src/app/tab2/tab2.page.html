@@ -1,17 +1,24 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+<ion-card>
+<ion-title>Agregar Cliente</ion-title>
+  <ion-card-content>
+    <ion-input type="text" [(ngModel)]="NombreCliente" placeholder="Nombre del cliente"></ion-input>
+    <ion-input type="text" [(ngModel)]="Telefono" placeholder="Número de teléfono"></ion-input>
+    <ion-input type="text" [(ngModel)]="Direccion" placeholder="Dirección"></ion-input>
+      <ion-button (click)="createRecord()" expand="full" color="success">Guardar</ion-button>
+  </ion-card-content>
+</ion-card>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-card *ngFor="let item of clientes">
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-card-header>
+    <ion-card-title>Cliente</ion-card-title>
+    <ion-card-subtitle>{{item.NomClient}}</ion-card-subtitle>
+    <ion-card-content>
+        Teléfono: {{item.Tel}}
+        <br>
+        Dirección: {{item.Dir}}
+    </ion-card-content>
+  </ion-card-header>
+</ion-card>
 </ion-content>
